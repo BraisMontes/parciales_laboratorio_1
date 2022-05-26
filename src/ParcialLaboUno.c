@@ -37,7 +37,7 @@ int contCensistaSol=0;
 eCensistas censistas[LEN]={{100,"Ana",34,"1203-2345"},{101,"Juan",24,"4301-54678"},{102,"Sol",47,"5902-37487"}};
 if(initArray(vivienda,LEN)==0){
 	do{
-		printf("\nElija la opcion a)Alta vivienda\nb)Modificar Vivienda\nc)Baja de la vivienda\nd)Listar Viviendas\ne)Listar censistas\nf)ListadoCensistasViviendas\ng)Salir");
+		printf("\nElija la opcion a)Alta vivienda\nb)Modificar Vivienda\nc)Baja de la vivienda\nd)Listar Viviendas\ne)Listar censistas\nf)ListadoCensistasViviendas\ng)Cualesmayor\nh)Salir");
 		scanf("%c", &opcion);
 
 		switch(opcion){
@@ -138,19 +138,21 @@ if(initArray(vivienda,LEN)==0){
 						}
 					}
 				}
-			}
 		}
+				break;
 		case 'g':
-			if(contCensistaAna>contCensistaJuan && contCensistaAna>contCensistaSol){
-				printf("Ana hizo mas censos");
-			}
-			else if(contCensistaJuan>contCensistaSol){
-				printf("Juan hizo mas censos");
+					if(contCensistaAna>contCensistaJuan && contCensistaAna>contCensistaSol){
+						printf("Ana hizo mas censos");
+					}
+					else if(contCensistaJuan>contCensistaSol){
+						printf("Juan hizo mas censos");
 
-			}else{
-				printf("Sol hizo mas censos");
-			}
-			break;
+					}else{
+						printf("Sol hizo mas censos");
+					}
+					break;
+		}
+
 	}while(opcion != 'h');
 }
 	return EXIT_SUCCESS;
