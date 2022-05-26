@@ -124,14 +124,17 @@ if(initArray(vivienda,LEN)==0){
 						if(vivienda[i].isEmpty==0 && censistas[j].legajoCensista == 100){
 							printCensistas(censistas,TAMCEN);
 							printViviendas(vivienda,LEN);
+							contCensistaAna++;
 						}
 						else if(vivienda[i].isEmpty==0 && censistas[j].legajoCensista == 101){
 								printCensistas(censistas, TAMCEN);
 								printViviendas(vivienda,LEN);
+								contCensistaJuan++;
 						}
 						else if(vivienda[i].isEmpty==0 && censistas[j].legajoCensista == 102){
 							printCensistas(censistas,TAMCEN);
 							printViviendas(vivienda,LEN);
+							contCensistaSol++;
 						}
 					}
 				}
